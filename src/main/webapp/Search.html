@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-image: url(images/found.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* New style for the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+
+h4 {
+  color: yellow;
+}
+
+h2 {
+  color: yellow;
+}
+
+p {
+  color: white;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: white; 
+}
+
+</style>
+</head>
+<body>
+
+<h1>PLEASE SEARCH FOR THE BOOK</h1>
+
+</body>
+
+</style>
+</head>
+<body>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="row">
+  <div class="left" style="background-color:white;">
+
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="famousbooks.html">Famous Books</a></li>
+      <li><a href="Mathematics.html">Mathematics category</a></li>
+      <li><a href="JavaScript.html">JavaScript</a></li>
+      <li><a href="History.html">History category</a></li>
+      <li><a href="python.html">Python</a></li>
+      <li><a href="Geography.html">Geography category</a></li>
+      <li><a href="SQL.html">SQL</a></li>
+      <li><a href="biology.html">Biology category</a></li>
+      
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
